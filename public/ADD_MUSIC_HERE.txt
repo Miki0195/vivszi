@@ -1,0 +1,46 @@
+🎵 HOW TO ADD ROMANTIC MUSIC
+============================
+
+Add a romantic classical music file as: music.mp3
+
+RECOMMENDED ROMANTIC CLASSICS:
+------------------------------
+
+1. **Canon in D - Pachelbel** (HIGHLY RECOMMENDED!)
+   - Perfect romantic vibe, not too intense
+   - Search: "Canon in D Pachelbel mp3"
+   
+2. **Clair de Lune - Debussy**
+   - Beautiful, dreamy, romantic
+   - Search: "Clair de Lune Debussy mp3"
+
+3. **Nocturne Op. 9 No. 2 - Chopin**
+   - Elegant and romantic piano piece
+   - Search: "Chopin Nocturne Op 9 No 2 mp3"
+
+4. **Romeo and Juliet Love Theme - Tchaikovsky**
+   - Classic romantic orchestral piece
+   - Search: "Romeo and Juliet Love Theme mp3"
+
+5. **La Vie en Rose - Instrumental Version**
+   - Timeless romantic classic
+   - Search: "La Vie en Rose instrumental mp3"
+
+WHERE TO DOWNLOAD:
+------------------
+1. YouTube to MP3 converter (e.g., youtube-to-mp3.org)
+2. Free Music Archive (freemusicarchive.org)
+3. Pixabay Music (pixabay.com/music)
+4. Bensound (bensound.com)
+
+STEPS:
+------
+1. Find the song on YouTube
+2. Use a YouTube to MP3 converter
+3. Download the MP3 file
+4. Rename it to: music.mp3
+5. Place it in the /public folder
+6. Refresh the page - music will auto-play!
+
+💡 TIP: Canon in D is perfect - romantic but not too cheesy!
+

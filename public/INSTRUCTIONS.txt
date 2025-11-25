@@ -1,0 +1,35 @@
+📸 PHOTO INSTRUCTIONS
+====================
+
+Add your 5 photos here with these exact names:
+- photo1.jpg
+- photo2.jpg
+- photo3.jpg
+- photo4.jpg
+- photo5.jpg
+
+Tips:
+- Use high quality photos (at least 1000x1000px)
+- Make sure they show you well
+- Mix of different settings/outfits is good
+
+🎵 MUSIC INSTRUCTIONS
+=====================
+
+Add background music as:
+- music.mp3
+
+Where to find music:
+1. Go to YouTube and find a romantic song
+2. Use a YouTube to MP3 converter (e.g., youtube-to-mp3.org)
+3. Download it and rename to "music.mp3"
+4. Place it in this public folder
+
+Good song suggestions:
+- Something romantic but not too cheesy
+- Instrumental versions work great
+- Around 3-5 minutes long
+- Upbeat and positive vibe
+
+The music will loop automatically!
+
