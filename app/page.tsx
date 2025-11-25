@@ -7,6 +7,8 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imageErrors, setImageErrors] = useState<{ [key: number]: boolean }>({});
   const [hasStarted, setHasStarted] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const slides = [
@@ -387,6 +389,33 @@ export default function Home() {
     }
   };
 
+  // Handle touch events for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
+    
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
+
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === ' ') {
@@ -401,7 +430,12 @@ export default function Home() {
   }, [slides.length]);
 
   return (
-    <main className="relative w-full h-full min-h-screen overflow-hidden bg-gradient-to-br from-rose-900 via-pink-800 to-red-900 touch-none">
+    <main 
+      className="relative w-full h-full min-h-screen overflow-hidden bg-gradient-to-br from-rose-900 via-pink-800 to-red-900"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Start Screen Overlay */}
       {!hasStarted && (
         <motion.div
@@ -502,14 +536,14 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Navigation */}
-      <div className="absolute bottom-4 md:bottom-12 left-0 right-0 flex justify-center items-center gap-3 md:gap-8 z-40 px-2">
+      <div className="absolute bottom-6 md:bottom-12 left-0 right-0 flex justify-center items-center gap-4 md:gap-8 z-40 px-2">
         <motion.button
           onClick={prevSlide}
-          className="bg-white/20 backdrop-blur-md text-white px-4 py-2 md:px-8 md:py-4 rounded-full text-lg md:text-2xl font-bold hover:bg-white/30 transition-all disabled:opacity-30"
+          className="bg-white/30 backdrop-blur-md text-white px-5 py-3 md:px-8 md:py-4 rounded-full text-xl md:text-2xl font-bold hover:bg-white/40 transition-all shadow-lg"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          ← <span className="hidden sm:inline">Előző</span>
+          ←
         </motion.button>
 
         <div className="flex gap-2 md:gap-3">
@@ -517,10 +551,10 @@ export default function Home() {
             <motion.button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
+              className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all ${
                 index === currentSlide
-                  ? 'bg-white w-8 md:w-12'
-                  : 'bg-white/40 hover:bg-white/60'
+                  ? 'bg-white w-10 md:w-12'
+                  : 'bg-white/50 hover:bg-white/70'
               }`}
               whileHover={{ scale: 1.2 }}
             />
@@ -529,18 +563,27 @@ export default function Home() {
 
         <motion.button
           onClick={nextSlide}
-          className="bg-white/20 backdrop-blur-md text-white px-4 py-2 md:px-8 md:py-4 rounded-full text-lg md:text-2xl font-bold hover:bg-white/30 transition-all"
+          className="bg-white/30 backdrop-blur-md text-white px-5 py-3 md:px-8 md:py-4 rounded-full text-xl md:text-2xl font-bold hover:bg-white/40 transition-all shadow-lg"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <span className="hidden sm:inline">Következő</span> →
+          →
         </motion.button>
       </div>
 
-      {/* Slide counter */}
+      {/* Slide counter and swipe hint */}
       <div className="absolute top-4 left-4 md:top-8 md:left-8 text-white/60 text-base md:text-xl">
         {currentSlide + 1} / {slides.length}
       </div>
+      
+      {/* Swipe hint for mobile */}
+      <motion.div 
+        className="absolute top-4 right-4 md:hidden text-white/40 text-sm flex items-center gap-1"
+        animate={{ x: [0, 5, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+      >
+        👉 Swipe
+      </motion.div>
     </main>
   );
 }
