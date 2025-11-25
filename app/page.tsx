@@ -14,20 +14,20 @@ export default function Home() {
       id: 0,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-8"
+          className="flex flex-col items-center justify-center h-full gap-6 md:gap-8 px-4"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
           <motion.div
-            className="text-8xl"
+            className="text-6xl md:text-8xl"
             animate={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
             👋
           </motion.div>
           <motion.h1
-            className="text-6xl font-bold text-white text-center"
+            className="text-4xl md:text-6xl font-bold text-white text-center"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -35,7 +35,7 @@ export default function Home() {
             Szia! ✨
           </motion.h1>
           <motion.p
-            className="text-2xl text-white/80 text-center"
+            className="text-xl md:text-2xl text-white/80 text-center"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
@@ -49,13 +49,13 @@ export default function Home() {
       id: 1,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-6 px-8"
+          className="flex flex-col items-center justify-center h-full gap-4 md:gap-6 px-4 md:px-8"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h2
-            className="text-5xl font-bold text-white text-center"
+            className="text-3xl md:text-5xl font-bold text-white text-center"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
@@ -63,7 +63,7 @@ export default function Home() {
             Buchsbaum Miklós vagyok 👨‍💼
           </motion.h2>
           <motion.div
-            className="text-3xl text-white/90 space-y-4 text-center"
+            className="text-2xl md:text-3xl text-white/90 space-y-3 md:space-y-4 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -100,13 +100,13 @@ export default function Home() {
       id: 2,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-8 px-8"
+          className="flex flex-col items-center justify-center h-full gap-6 md:gap-8 px-4 md:px-8"
           initial={{ opacity: 0, rotateY: 90 }}
           animate={{ opacity: 1, rotateY: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="text-7xl mb-4"
+            className="text-5xl md:text-7xl mb-2 md:mb-4"
             animate={{ 
               scale: [1, 1.2, 1],
               rotate: [0, 5, -5, 0]
@@ -116,16 +116,16 @@ export default function Home() {
             💭
           </motion.div>
           <motion.h2
-            className="text-4xl font-bold text-white text-center max-w-4xl leading-relaxed"
+            className="text-2xl md:text-4xl font-bold text-white text-center max-w-4xl leading-relaxed px-2"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Nagyon szimpatikus vagy és úgy gondolom<br />
+            Nagyon szimpatikus vagy és úgy gondolom<br className="hidden md:block" />
             megtalálnánk a közös hangot 🎵
           </motion.h2>
           <motion.p
-            className="text-2xl text-white/70 italic"
+            className="text-lg md:text-2xl text-white/70 italic"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
@@ -139,13 +139,13 @@ export default function Home() {
       id: 3,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-8 px-8"
+          className="flex flex-col items-center justify-center h-full gap-6 md:gap-8 px-4 md:px-8"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: 'spring' }}
         >
           <motion.div
-            className="text-9xl"
+            className="text-7xl md:text-9xl"
             animate={{ 
               rotate: [0, 360],
               scale: [1, 1.2, 1]
@@ -155,7 +155,7 @@ export default function Home() {
             ❤️
           </motion.div>
           <motion.h2
-            className="text-6xl font-bold text-white text-center"
+            className="text-2xl md:text-4xl font-bold text-white text-center px-2"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -163,7 +163,7 @@ export default function Home() {
             Mivel ebből úgysem fogsz megismerni és rendes véleményt alkotni rólam..
           </motion.h2>
           <motion.h1
-            className="text-5xl font-bold text-center bg-gradient-to-r from-pink-300 via-rose-300 to-red-300 bg-clip-text text-transparent"
+            className="text-3xl md:text-5xl font-bold text-center bg-gradient-to-r from-pink-300 via-rose-300 to-red-300 bg-clip-text text-transparent px-2"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6, type: 'spring', stiffness: 150 }}
@@ -180,13 +180,13 @@ export default function Home() {
       id: 4,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-4 px-8 py-8"
+          className="flex flex-col items-center justify-center h-full gap-3 md:gap-4 px-2 md:px-8 py-4 md:py-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <motion.h2
-            className="text-4xl font-bold text-white text-center mb-2"
+            className="text-2xl md:text-4xl font-bold text-white text-center mb-1 md:mb-2"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -196,7 +196,7 @@ export default function Home() {
           
           {/* First row - 3 images */}
           <motion.div 
-            className="flex gap-4 justify-center items-center w-full max-w-5xl mb-2"
+            className="flex gap-2 md:gap-4 justify-center items-center w-full max-w-5xl mb-1 md:mb-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -204,13 +204,13 @@ export default function Home() {
             {['IMG_0337.jpg', 'IMG_0405.jpg', 'IMG_0528.jpg'].map((filename, index) => (
               <motion.div
                 key={filename}
-                className="relative w-64 h-64"
+                className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 + index * 0.1 }}
                 whileHover={{ scale: 1.05, rotate: 2 }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-rose-400/20 to-pink-400/20 rounded-xl border-4 border-rose-200/40 overflow-hidden shadow-2xl">
+                <div className="w-full h-full bg-gradient-to-br from-rose-400/20 to-pink-400/20 rounded-lg md:rounded-xl border-2 md:border-4 border-rose-200/40 overflow-hidden shadow-2xl">
                   <img 
                     src={`/image/${filename}`} 
                     alt={`Kép ${index + 1}`}
@@ -224,7 +224,7 @@ export default function Home() {
 
           {/* Second row - 3 images */}
           <motion.div 
-            className="flex gap-4 justify-center items-center w-full max-w-5xl"
+            className="flex gap-2 md:gap-4 justify-center items-center w-full max-w-5xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
@@ -232,13 +232,13 @@ export default function Home() {
             {['IMG_0777.jpg', 'IMG_1299.jpg', 'IMG_1300.jpg'].map((filename, index) => (
               <motion.div
                 key={filename}
-                className="relative w-64 h-64"
+                className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 + index * 0.1 }}
                 whileHover={{ scale: 1.05, rotate: -2 }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-rose-400/20 to-pink-400/20 rounded-xl border-4 border-rose-200/40 overflow-hidden shadow-2xl">
+                <div className="w-full h-full bg-gradient-to-br from-rose-400/20 to-pink-400/20 rounded-lg md:rounded-xl border-2 md:border-4 border-rose-200/40 overflow-hidden shadow-2xl">
                   <img 
                     src={`/image/${filename}`} 
                     alt={`Kép ${index + 4}`}
@@ -256,13 +256,13 @@ export default function Home() {
       id: 5,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-8 px-8"
+          className="flex flex-col items-center justify-center h-full gap-6 md:gap-8 px-4 md:px-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="text-7xl mb-4"
+            className="text-5xl md:text-7xl mb-2 md:mb-4"
             animate={{ 
               rotate: [0, 10, -10, 0],
               scale: [1, 1.1, 1]
@@ -272,7 +272,7 @@ export default function Home() {
             😊
           </motion.div>
           <motion.h2
-            className="text-4xl font-bold text-white text-center max-w-3xl"
+            className="text-3xl md:text-4xl font-bold text-white text-center max-w-3xl px-2"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -280,7 +280,7 @@ export default function Home() {
             Nyugi, nem vagyok 🙅‍♂️
           </motion.h2>
           <motion.div
-            className="text-3xl text-white/90 space-y-4 text-center"
+            className="text-2xl md:text-3xl text-white/90 space-y-3 md:space-y-4 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -308,7 +308,7 @@ export default function Home() {
             </motion.p>
           </motion.div>
           <motion.p
-            className="text-2xl text-green-300 font-bold mt-8"
+            className="text-xl md:text-2xl text-green-300 font-bold mt-4 md:mt-8"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 1.4, type: 'spring', stiffness: 200 }}
@@ -322,13 +322,13 @@ export default function Home() {
       id: 6,
       content: (
         <motion.div
-          className="flex flex-col items-center justify-center h-full gap-12 px-8"
+          className="flex flex-col items-center justify-center h-full gap-8 md:gap-12 px-4 md:px-8"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="text-9xl"
+            className="text-7xl md:text-9xl"
             animate={{ 
               scale: [1, 1.3, 1],
               rotate: [0, 5, -5, 0]
@@ -338,7 +338,7 @@ export default function Home() {
             💌
           </motion.div>
           <motion.h2
-            className="text-5xl font-bold text-white text-center max-w-4xl leading-relaxed"
+            className="text-3xl md:text-5xl font-bold text-white text-center max-w-4xl leading-relaxed px-2"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -346,7 +346,7 @@ export default function Home() {
             Ha felkeltettem az érdeklődésed,
           </motion.h2>
           <motion.h1
-            className="text-6xl font-bold bg-gradient-to-r from-pink-300 via-rose-300 to-red-300 bg-clip-text text-transparent text-center"
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-300 via-rose-300 to-red-300 bg-clip-text text-transparent text-center px-2"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6, type: 'spring', stiffness: 150 }}
@@ -357,7 +357,7 @@ export default function Home() {
             Várom a visszajelzésed! ✨
           </motion.h1>
           <motion.div
-            className="text-7xl mt-8"
+            className="text-5xl md:text-7xl mt-4 md:mt-8"
             animate={{ 
               y: [0, -20, 0],
             }}
@@ -401,7 +401,7 @@ export default function Home() {
   }, [slides.length]);
 
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-gradient-to-br from-rose-900 via-pink-800 to-red-900">
+    <main className="relative w-full h-full min-h-screen overflow-hidden bg-gradient-to-br from-rose-900 via-pink-800 to-red-900 touch-none">
       {/* Start Screen Overlay */}
       {!hasStarted && (
         <motion.div
@@ -410,9 +410,9 @@ export default function Home() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="text-center">
+          <div className="text-center px-4">
             <motion.div
-              className="text-9xl mb-8"
+              className="text-7xl md:text-9xl mb-6 md:mb-8"
               animate={{ 
                 scale: [1, 1.2, 1],
                 rotate: [0, 5, -5, 0]
@@ -422,14 +422,21 @@ export default function Home() {
               💕
             </motion.div>
             <motion.h1
-              className="text-6xl font-bold text-white mb-6"
+              className="text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6"
               animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               Kattints a kezdéshez
             </motion.h1>
+            <motion.h1
+              className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6"
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+               Hanggal nézd meg!
+            </motion.h1>
             <motion.p
-              className="text-2xl text-white/80"
+              className="text-xl md:text-2xl text-white/80"
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
@@ -495,24 +502,24 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Navigation */}
-      <div className="absolute bottom-12 left-0 right-0 flex justify-center items-center gap-8 z-40">
+      <div className="absolute bottom-4 md:bottom-12 left-0 right-0 flex justify-center items-center gap-3 md:gap-8 z-40 px-2">
         <motion.button
           onClick={prevSlide}
-          className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-full text-2xl font-bold hover:bg-white/30 transition-all disabled:opacity-30"
+          className="bg-white/20 backdrop-blur-md text-white px-4 py-2 md:px-8 md:py-4 rounded-full text-lg md:text-2xl font-bold hover:bg-white/30 transition-all disabled:opacity-30"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          ← Előző
+          ← <span className="hidden sm:inline">Előző</span>
         </motion.button>
 
-        <div className="flex gap-3">
+        <div className="flex gap-2 md:gap-3">
           {slides.map((_, index) => (
             <motion.button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
                 index === currentSlide
-                  ? 'bg-white w-12'
+                  ? 'bg-white w-8 md:w-12'
                   : 'bg-white/40 hover:bg-white/60'
               }`}
               whileHover={{ scale: 1.2 }}
@@ -522,16 +529,16 @@ export default function Home() {
 
         <motion.button
           onClick={nextSlide}
-          className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-full text-2xl font-bold hover:bg-white/30 transition-all"
+          className="bg-white/20 backdrop-blur-md text-white px-4 py-2 md:px-8 md:py-4 rounded-full text-lg md:text-2xl font-bold hover:bg-white/30 transition-all"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          Következő →
+          <span className="hidden sm:inline">Következő</span> →
         </motion.button>
       </div>
 
       {/* Slide counter */}
-      <div className="absolute top-8 left-8 text-white/60 text-xl">
+      <div className="absolute top-4 left-4 md:top-8 md:left-8 text-white/60 text-base md:text-xl">
         {currentSlide + 1} / {slides.length}
       </div>
     </main>
